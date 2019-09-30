@@ -1,0 +1,10 @@
+.idea
+Include/
+Lib/
+Scripts/
+pyvenv.cfg
+
+__pycache__/
+*.py[cod]
+*$py.class
+
