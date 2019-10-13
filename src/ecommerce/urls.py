@@ -20,6 +20,7 @@ from django.conf.urls.static import static
 from products.views import(ProductListView,
                            product_list_view,
                            ProductDetailView,
+                           ProductDetailSlugView,
                            product_detail_view,
                            ProductFeaturedDetailView,
                            ProductFeaturedListView)
@@ -41,6 +42,7 @@ urlpatterns = [
     url(r'^featured/(?P<pk>\d+)/$', ProductFeaturedDetailView.as_view()),
     url(r'^products-fbv/$', product_list_view),
     url(r'^products/(?P<pk>\d+)/$', ProductDetailView.as_view()),
+    url(r'^products/(?P<slug>[\w-]+)/$', ProductDetailSlugView.as_view()),
     url(r'^products-fbv/(?P<pk>\d+)/$', product_detail_view),
     url(r'^admin/', admin.site.urls),
 ]
