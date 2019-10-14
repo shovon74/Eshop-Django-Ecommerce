@@ -1,5 +1,5 @@
 <h1>sfsfgdsfgfdsg</h1>
 {% for obj in object_list %}
-{{obj.title}}<br>
+<a href="{{obj.get_absolute_url}}">{{obj.title}}</a><br>
 {%endfor%}
 
