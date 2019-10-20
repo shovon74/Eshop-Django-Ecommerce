@@ -14,6 +14,13 @@ class ContactForm(forms.Form):
             attrs={
                 "class": "form-control", "placeholder":"Your Email"
                   }))
+    content = forms.CharField(
+        widget=forms.Textarea(
+            attrs={
+                'class': 'form-control',
+                "placeholder": "Your message"
+            }
+        ))
 
     def clean_email(self):
         email = self.cleaned_data.get("email")
